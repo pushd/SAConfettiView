@@ -46,7 +46,7 @@ open class SAConfettiView: UIView {
         active = false
     }
 
-    open func startConfetti() {
+    @objc open func startConfetti() {
         emitter = CAEmitterLayer()
 
         emitter.emitterPosition = CGPoint(x: frame.size.width / 2.0, y: 0)
@@ -63,7 +63,7 @@ open class SAConfettiView: UIView {
         active = true
     }
 
-    open func stopConfetti() {
+    @objc open func stopConfetti() {
         emitter?.birthRate = 0
         active = false
     }
@@ -114,7 +114,7 @@ open class SAConfettiView: UIView {
         return confetti
     }
 
-    open func isActive() -> Bool {
+    @objc open func isActive() -> Bool {
     		return self.active
     }
 }
